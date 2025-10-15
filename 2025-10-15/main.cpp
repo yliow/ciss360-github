@@ -17,7 +17,7 @@ void println_bits(int b[32])
     
     for (int i = 31; i >= 0; --i)
     {
-        std::cout << b[i] << ' ';
+        std::cout << S[b[i]] << ' ';
     }
     std::cout << '\n';
 }
