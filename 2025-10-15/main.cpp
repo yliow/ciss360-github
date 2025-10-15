@@ -11,9 +11,9 @@ void get_bits(int b[32], int x, int base = 2)
 
 void println_bits(int x, int base = 2)
 {
-    char S[16];
+    char S[36];
     for (int i = 0; i < 10; ++i) S[i] = '0' + i;
-    for (int i = 0; i < 6; ++i) S[10 + i] = 'A' + i;
+    for (int i = 0; i < 26; ++i) S[10 + i] = 'A' + i;
 
     int b[32];
     get_bits(b, x, base);
@@ -26,17 +26,14 @@ void println_bits(int x, int base = 2)
 
 int main()
 {
-    int base = 16;
-    int x;
-    int bits[32];
-    
-    std::cin >> x;
-    println_bits(x);
+    int x, base = 2;
+    std::cin >> x >> base;
+    println_bits(x, base);
 
     int y = (x << 1);
     int z = x * 2;
-    std::cout << x << ": "; println_bits(x);
-    std::cout << y << ": "; println_bits(y);
-    std::cout << z << ": "; println_bits(z);
+    std::cout << x << ": "; println_bits(x, base);
+    std::cout << y << ": "; println_bits(y, base);
+    std::cout << z << ": "; println_bits(z, base);
     return 0;
 }
