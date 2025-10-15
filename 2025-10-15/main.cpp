@@ -9,12 +9,14 @@ void get_bits(int b[32], int x, int base = 2)
     }
 }
 
-void println_bits(int b[32])
+void println_bits(int x)
 {
     char S[16];
     for (int i = 0; i < 10; ++i) S[i] = '0' + i;
     for (int i = 0; i < 6; ++i) S[10 + i] = 'A' + i;
-    
+
+    int b[32];
+    get_bits(b, x);
     for (int i = 31; i >= 0; --i)
     {
         std::cout << S[b[i]] << ' ';
