@@ -31,13 +31,12 @@ int main()
     int bits[32];
     
     std::cin >> x;
-    
-    get_bits(bits, x);
-    println_bits(bits);
+    println_bits(x);
 
-    x = 10;
     int y = (x << 1);
-    std::cout << y << '\n';
-    
+    int z = x * 2;
+    std::cout << x << ": "; println_bits(x);
+    std::cout << y << ": "; println_bits(y);
+    std::cout << z << ": "; println_bits(z);
     return 0;
 }
