@@ -33,6 +33,10 @@ void HA(int x, int y, int * s, int * c)
     *c = AND(x, y);
 }
 
+void FA(int x, int y, int c0, int *s, int *c)
+{
+}
+
 int main()
 {
     std::cout << "XOR\n";
