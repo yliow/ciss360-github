@@ -1,0 +1,2 @@
+run:
+	g++ *.cpp && ./a.out
